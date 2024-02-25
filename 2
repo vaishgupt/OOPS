@@ -1,0 +1,130 @@
+/*#include<bits/stdc++.h>
+using namespace std;
+
+class student{
+    private:   //if private is present then using function we can access class element
+    string name; 
+    int age; 
+    string grade; 
+
+public:
+void getname(string s){
+    name=s;
+}
+void setname(){
+    cout<<name<<endl;
+}
+};
+
+
+int main(){
+    student s1;
+    s1.getname("Vaish");
+    s1.setname();
+}*/
+
+
+
+
+
+
+
+/*#include<bits/stdc++.h>
+using namespace std;
+
+class student{
+    private:   //if private is present then using function we can access class element
+    string name; 
+    int age; 
+    string grade; 
+
+public:
+void getname(string s){
+    name=s;
+}
+void setname(){
+    cout<<name<<endl;
+}
+void getage(int a){
+    age=a;
+}
+int setage(){ //we can get output in this way also,check its output in main function
+  return age;
+}
+
+void getgrade(string g){
+    grade=g;
+}
+void setgrade(){  
+    cout<<grade<<endl;
+}
+
+};
+
+
+int main(){
+    student s1;
+    s1.getname("Vaish");
+    s1.setname();
+    s1.getage(10);
+    cout<<s1.setage()<<endl;
+    s1.getgrade("A+");
+    s1.setgrade();
+}*/
+
+
+
+
+#include <bits/stdc++.h>
+using namespace std;
+
+class student {
+private:
+    string name;
+    int age;
+    string grade;
+
+public:
+    void getname(string s) {
+        if (s.size() == 0) {
+            cout << "invalid";
+            return;
+        }
+        name = s;
+    }
+    void setname() {
+        cout << name << endl;
+    }
+    void getage(int a) {
+        age = a;
+        if (age <= 0 || age > 100) {
+            cout << "invalid";
+            return;
+        }
+    }
+    void setage() {
+        cout << age << endl;
+    }
+
+    void getgrade(string g) {
+        grade = g;
+    }
+    void setgrade(int pin) {
+        if (pin == 123) {
+            cout << grade << endl;
+        } else {
+            cout << "Access Denied" << endl;
+        }
+    }
+};
+
+int main() {
+    student s1;
+    s1.getname("Vaish");
+    s1.setname();
+    s1.getage(10);
+    s1.setage();
+    s1.getgrade("A+");
+    s1.setgrade(123); 
+    return 0;
+}
