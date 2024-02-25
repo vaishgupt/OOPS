@@ -1,0 +1,53 @@
+PADDING:In padding size of object is chosen based on multiple of data type
+
+FIND SIZE OF OBJECT
+q1)
+int a;
+char b;
+
+ANS- 8(a,a,a,a,b)
+q2)
+char a;
+int b;
+
+ANS- 8(a***b)
+
+q3)
+char a;
+int b;
+char c;
+
+ANS-12
+
+
+q4)
+char a;
+char b;
+int c;
+double d;
+
+ANS-16
+
+q4)
+char a;
+int b;
+char c;
+double d;
+
+ANS-24
+
+CODE:
+
+#include<bits/stdc++.h>
+using namespace std;
+class pad{
+char a;
+int b;
+char c;
+double d;
+};
+
+int main(){
+pad obj;
+cout<<sizeof(pad)<<" ";
+}
